@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function fvalid() {
+              var user=document.regform.name.value;
+              var pass=document.regform.password.value;
+        
+              if(user==null || user==""){
+                alert("Please enter UserName")
+                uderid.focus();
+                return false;
+              }
+        
+              if(pass==null || pass=="" || pass.length<6){
+                alert("Minimum length of password must be 6")
+                password.focus();
+                return false;
+              }
+        
+              // if(pass=="admin" && user=="faculty1"){
+              //   alert("Successfully logged in!!")
+        
+              // }
+              // else{
+              //   alert("Incorrect id or password")
+              //   return false;
+              // 
+        
+            }
+        
+            </script>
+    </head>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header id="site-header">
+        <div id="site-header-container">
+    
+    
+            <div id="site-header-logo">
+                CGEN
+            </div>
+    
+            <input type="checkbox" class="toggleSideMenu" id="toggleSideMenu" autocomplete="off">
+            <label for="toggleSideMenu" class="hamburger-icon">
+                <div class="hamburger-menu-line diagonal-1"></div>
+                <div class="hamburger-menu-line horizontal"></div>
+                <div class="hamburger-menu-line diagonal-2"></div>
+            </label>
+    
+            <div id="side-menu-container">
+                <div id="before-side-menu">
+                    <span>Content before main menu</span>
+                </div>
+                <nav id="top-menu">
+                    <ul id="main-menu" >
+                        <li class="main-menu-item"><a href="index.html">Home</a></li>
+                        <li class="main-menu-item"><a href="#">About</a></li>
+                        <li class="main-menu-item"><a href="#">Captions</a></li>
+                        <li class="main-menu-item"><a href="#">Hashtags</a></li>
+                        <li class="main-menu-item"><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div id="after-side-menu">
+                    <span>Content after main menu</span>
+                    <div class="social-buttons">
+                        <i class="icon-linkedin"><img class="icon-header" src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png"/></i><i class="icon-facebook-squared"><img class="icon-header" src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook.png"/></i><i class="icon-vkontakte"><img class="icon-header" src="https://img.icons8.com/ios-glyphs/30/ffffff/vkontakte.png"/></i><i class="icon-twitter"><img class="icon-header" src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter.png"/></i>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="site-header-search">
+                <div id="site-header-search-container">
+                    <form action="" autocomplete="on">
+                        <input id="search" name="search" type="text" placeholder="Search..."><button id="search_submit" type="submit"><!--i class="icon-search"--><img class ="icon-header" src="https://img.icons8.com/ios-glyphs/20/666666/search--v1.png"/><!--/i--></button>
+                    </form>
+                </div>
+            </div>
+    
+    
+            <div id="site-header-auth-container">
+                <button id="site-header-login-button" class="site-header-auth-button"><i class="icon-logout"><img class="icon-header" src="https://img.icons8.com/ios-filled/18/666666/login-rounded-right.png" /></i><span><a href="form.html">Log in</a></span></button>
+                <button id="site-header-registration-button" class="site-header-auth-button"><i class="icon-user"><img class="icon-header" src="https://img.icons8.com/ios-glyphs/18/666666/user--v1.png"/></i><span>Register</span></button>
+            </div>
+    
+        </div>
+    </header>
+<form onsubmit="fvalid()" name="regform" method="post">
+<div class="container">
+    <h1>sign up</h1>
+    <div>
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" placeholder="name *" autofocus>
+    </div>
+    <div>
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" value="" placeholder="password *" autocomplete="">
+    </div>
+    
+        <a href="upload.html">login here</a>
+</form>
+</body>
+</html>
